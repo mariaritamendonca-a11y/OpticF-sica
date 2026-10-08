@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visão Clara | A Óptica do Olho Humano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO SEMÂNTICO -->
+  <header class="header">
+    <div class="logo">
+      <h1>Visão Clara 👁️<span>.Física</span></h1>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-list">
+        <li><a href="#optica">A Óptica</a></li>
+        <li><a href="#doencas">Doenças & Tratamento</a></li>
+        <li><a href="#jogo">Jogo do Oftalmo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- Seção de Introdução à Física da Visão -->
+    <section id="optica" class="card">
+      <h2 class="section-title">Como a Física Explica a Visão?</h2>
+      <p>
+        O olho humano funciona como um sistema óptico convergente. A luz atravessa a <strong>córnea</strong> e o <strong>cristalino</strong> (a lente natural do olho) para convergir exatamente sobre a <strong>retina</strong>, onde a imagem é formada de cabeça para baixo e enviada ao cérebro pelo nervo óptico.
+      </p>
+    </section>
+
+    <!-- Seção de Doenças, Prevenção e Tratamento -->
+    <section id="doencas" class="card">
+      <h2 class="section-title">Ametropias e Doenças Oculares</h2>
+      <div class="cards-grid">
+        <article class="grid-card">
+          <h3>Miopia</h3>
+          <p><strong>Causa:</strong> Olho muito longo ou córnea muito curva. A imagem foca <em>antes</em> da retina.</p>
+          <p><strong>Tratamento:</strong> Lentes divergentes (côncavas) ou cirurgia refrativa a laser.</p>
+        </article>
+
+        <article class="grid-card">
+          <h3>Hipermetropia</h3>
+          <p><strong>Causa:</strong> Olho muito curto. A imagem foca <em>atrás</em> da retina.</p>
+          <p><strong>Tratamento:</strong> Lentes convergentes (convexas).</p>
+        </article>
+
+        <article class="grid-card">
+          <h3>Astigmatismo</h3>
+          <p><strong>Causa:</strong> Curvatura irregular da córnea, gerando múltiplos pontos de foco.</p>
+          <p><strong>Tratamento:</strong> Lentes cilíndricas.</p>
+        </article>
+
+        <article class="grid-card">
+          <h3>Catarata & Glaucoma</h3>
+          <p><strong>Catarata:</strong> Opacificação do cristalino. Tratamento: Cirurgia de substituição por lente intraocular.</p>
+          <p><strong>Glaucoma:</strong> Aumento da pressão intraocular. Tratamento: Colírios específicos ou laser.</p>
+        </article>
+      </div>
+
+      <div class="prevention-box">
+        <h3>🛡️ Dicas de Prevenção e Saúde Ocular</h3>
+        <ul>
+          <li>Faça pausas a cada 20 minutos olhando para telas (Regra 20-20-20).</li>
+          <li>Use óculos de sol com proteção UVA/UVB adequada.</li>
+          <li>Visite o Oftalmologista ao menos 1 vez por ano.</li>
+          <li>Mantenha uma boa iluminação ao ler e estudar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Seção Interativa (Joguinho: Desafio do Oftalmo) -->
+    <section id="jogo" class="card game-card">
+      <h2 class="section-title">🎮 Joguinho: Desafio do Oftalmo</h2>
+      <p>Ajude os pacientes diagnosticando o problema de visão e escolhendo a lente correta!</p>
+
+      <div class="game-container" id="gameArea" tabindex="0" aria-live="polite">
+        <div id="patientDialogue" class="dialogue-box">
+          Carregando caso clínico...
+        </div>
+
+        <div class="options-grid" id="optionsContainer">
+          <!-- Botões de resposta via JS -->
+        </div>
+
+        <div id="gameFeedback" class="feedback-box" hidden></div>
+        <button id="nextBtn" class="btn btn-gold" style="display:none;">Próximo Paciente ➔</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ SEMÂNTICO -->
+  <footer class="footer">
+    <p>Projeto Web de Física &bull; Desenvolvido com HTML5, CSS3 e JavaScript</p>
+    <p><small>Prazo de Entrega: 15/10 &bull; Acessível e Responsivo</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
