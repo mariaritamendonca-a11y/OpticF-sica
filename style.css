@@ -1,0 +1,228 @@
+/* PALETA DE CORES: AZUL, BRANCO E DOURADO */
+:root {
+  --primary-blue: #0b2545;
+  --secondary-blue: #134074;
+  --accent-gold: #d4af37;
+  --gold-hover: #b59222;
+  --bg-light: #f4f7fc;
+  --card-bg: #ffffff;
+  --text-dark: #1d2d44;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* CABEÇALHO */
+.header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 4px solid var(--accent-gold);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+.logo span {
+  color: var(--accent-gold);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s;
+}
+
+.nav-list a:hover, .nav-list a:focus {
+  color: var(--accent-gold);
+  outline: 2px solid var(--accent-gold);
+}
+
+/* MAIN */
+.main-content {
+  flex: 1;
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--secondary-blue);
+}
+
+.section-title {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+/* GRID DE DOENÇAS */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.grid-card {
+  flex: 1 1 calc(50% - 1rem);
+  background-color: var(--bg-light);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-gold);
+  min-width: 250px;
+}
+
+.prevention-box {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.prevention-box h3 {
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.prevention-box ul {
+  padding-left: 1.2rem;
+}
+
+/* JOGUINHO */
+.game-card {
+  border-top-color: var(--accent-gold);
+}
+
+.game-container {
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dialogue-box {
+  background-color: var(--white);
+  border: 2px solid var(--secondary-blue);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  flex: 1 1 calc(50% - 0.8rem);
+  min-width: 200px;
+}
+
+.btn-blue {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+}
+
+.btn-blue:hover, .btn-blue:focus {
+  background-color: var(--primary-blue);
+  outline: 2px solid var(--accent-gold);
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: var(--primary-blue);
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--gold-hover);
+}
+
+.feedback-box {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.feedback-correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.feedback-wrong {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* RODAPÉ */
+.footer {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  border-top: 3px solid var(--accent-gold);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .grid-card, .btn {
+    flex: 1 1 100%;
+  }
+}
